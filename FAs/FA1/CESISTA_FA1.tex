@@ -1,0 +1,1188 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin=1in]{geometry}
+
+\title{APM1220 FA1}
+\author{Kristen Jelaena Cesista}
+\date{August 2026}
+
+\begin{document}
+
+\maketitle
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\vspace{2em}
+
+\noindent {\Large \textbf{Problem 2.2}} \hfill {\large \textbf{(5 points)}}
+
+\vspace{1em}
+
+\noindent Given the matrices
+
+$$
+\mathbf{A} = \begin{bmatrix} -1 & 3 \\ 4 & 2 \end{bmatrix}, \quad
+\mathbf{B} = \begin{bmatrix} 4 & -3 \\ 1 & -2 \\ -2 & 0 \end{bmatrix}, \quad \text{and} \quad
+\mathbf{C} = \begin{bmatrix} 5 \\ -4 \\ 2 \end{bmatrix}
+$$
+
+\noindent perform the indicated multiplications:
+
+\begin{enumerate}
+\item[(a)] $5\mathbf{A}$
+
+$$
+5A
+=
+5
+\begin{bmatrix}
+-1 & 3\\
+4 & 2
+\end{bmatrix}
+=
+\begin{bmatrix}
+-1\cdot5 & 3\cdot5\\
+4\cdot5 & 2\cdot5
+\end{bmatrix}
+$$
+
+$$
+\boxed{
+5A=
+\begin{bmatrix}
+-5 & 15\\
+20 & 10
+\end{bmatrix}
+}
+$$
+
+\item[(b)] $\mathbf{B}\mathbf{A}$
+
+$$
+BA
+=
+\begin{bmatrix}
+4 & -3\\
+1 & -2\\
+-2 & 0
+\end{bmatrix}
+\begin{bmatrix}
+-1 & 3\\
+4 & 2
+\end{bmatrix}
+$$
+
+$$
+=
+\begin{bmatrix}
+4(-1)+(-3)(4) & 4(3)+(-3)(2)\\
+1(-1)+(-2)(4) & 1(3)+(-2)(2)\\
+(-2)(-1)+(0)(4) & (-2)(3)+(0)(2)
+\end{bmatrix}
+$$
+
+$$
+=
+\begin{bmatrix}
+-4-12 & 12-6\\
+-1-8 & 3-4\\
+2+0 & -6+0
+\end{bmatrix}
+$$
+
+$$
+\boxed{
+BA=
+\begin{bmatrix}
+-16 & 6\\
+-9 & -1\\
+2 & -6
+\end{bmatrix}
+}
+$$
+
+\item[(c)] $\mathbf{A}'\mathbf{B}'$
+
+$$
+A'
+=
+\begin{bmatrix}
+-1 & 4\\
+3 & 2
+\end{bmatrix}
+\qquad
+B'
+=
+\begin{bmatrix}
+4 & 1 & -2\\
+-3 & -2 & 0
+\end{bmatrix}
+$$
+
+$$
+A'B'
+=
+\begin{bmatrix}
+-1 & 4\\
+3 & 2
+\end{bmatrix}
+\begin{bmatrix}
+4 & 1 & -2\\
+-3 & -2 & 0
+\end{bmatrix}
+$$
+
+$$
+=
+\begin{bmatrix}
+(-1)(4)+(4)(-3) & (-1)(1)+(4)(-2) & (-1)(-2)+(4)(0)\\
+(3)(4)+(2)(-3) & (3)(1)+(2)(-2) & (3)(-2)+(2)(0)
+\end{bmatrix}
+$$
+
+$$
+=
+\begin{bmatrix}
+-4-12 & -1-8 & 2+0\\
+12-6 & 3-4 & -6+0
+\end{bmatrix}
+$$
+
+$$
+\boxed{
+A'B'
+=
+\begin{bmatrix}
+-16 & -9 & 2\\
+6 & -1 & -6
+\end{bmatrix}
+}
+$$
+
+\item[(d)] $\mathbf{C}'\mathbf{B}$
+
+$$
+C'
+=
+\begin{bmatrix}
+5 & -4 & 2
+\end{bmatrix}
+$$
+
+$$
+C'B
+=
+\begin{bmatrix}
+5 & -4 & 2
+\end{bmatrix}
+\begin{bmatrix}
+4 & -3\\
+1 & -2\\
+-2 & 0
+\end{bmatrix}
+$$
+
+$$
+=
+\begin{bmatrix}
+(5)(4)+(-4)(1)+(2)(-2)
+&
+(5)(-3)+(-4)(-2)+(2)(0)
+\end{bmatrix}
+$$
+
+$$
+=
+\begin{bmatrix}
+20-4-4 & -15+8+0
+\end{bmatrix}
+$$
+
+$$
+\boxed{
+C'B=
+\begin{bmatrix}
+12 & -7
+\end{bmatrix}
+}
+$$
+
+\item[(e)] Is $\mathbf{A}\mathbf{B}$ defined?
+
+\noindent For a matrix multiplication to be defined, the number of columns of the 1st matrix must equal the number of rows of the 2nd one.
+
+\noindent The matrix $\mathbf{A}$ has dimensions $2\times2$, while the matrix $\mathbf{B}$ has dimensions $3\times2$. $\mathbf{B}\mathbf{A}$ is defined because the number of columns in $\mathbf{B}$ and the number of rows in $\mathbf{A}$ are both 2. Similarly, $\mathbf{A}'\mathbf{B}'$ is defined because the number of columns in $\mathbf{A}'$ is 2 and the number of rows in $\mathbf{B}'$ is also 2.
+
+\noindent For the multiplication $\mathbf{A}\mathbf{B}$ to be defined, the number of columns of $\mathbf{A}$ must equal the number of rows of $\mathbf{B}$. The number of columns of $\mathbf{A}$ is $2$, while the number of rows of $\mathbf{B}$ is $3$. Since
+
+$$
+2\neq3,
+$$
+
+\noindent the multiplication is not defined.
+
+$$
+\boxed{\mathbf{A}\mathbf{B}\text{ is not defined.}}
+$$
+
+\end{enumerate}
+
+\vspace{2em}
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\vspace{2em}
+
+\noindent {\Large \textbf{Problem 2.4}} \hfill {\large \textbf{(6 points)}}
+
+\vspace{1em}
+
+\noindent When $\mathbf{A}^{-1}$ and $\mathbf{B}^{-1}$ exist, prove each of the following:
+
+\begin{enumerate}
+\item[(a)] $(\mathbf{A}')^{-1} = (\mathbf{A}^{-1})'$
+
+\vspace{0.5em}
+
+\noindent Since $\mathbf{A}^{-1}$ exists, by definition of an inverse we know that
+
+$$
+\mathbf{A}\mathbf{A}^{-1} = \mathbf{I}.
+$$
+
+\noindent Taking the transpose of both sides gives
+
+$$
+(\mathbf{A}\mathbf{A}^{-1})' = \mathbf{I}'.
+$$
+
+\noindent Since the transpose of an identity matrix is itself, $\mathbf{I}' = \mathbf{I}$. Also, the transpose of a product reverses the order of the matrices, so
+
+$$
+\underline{
+(\mathbf{A}^{-1})'\mathbf{A}' = \mathbf{I}
+}
+$$
+
+\noindent Similarly, using the other side of the inverse definition,
+
+$$
+\mathbf{A}^{-1}\mathbf{A} = \mathbf{I},
+$$
+
+\noindent taking the transpose of both sides will result in
+
+$$
+(\mathbf{A}^{-1}\mathbf{A})' = \mathbf{I}',
+$$
+
+\noindent and applying the same properties  as before will give us
+
+$$
+\underline{
+\mathbf{A}'(\mathbf{A}^{-1})' = \mathbf{I}
+}
+$$
+
+\noindent We showed that $(\mathbf{A}^{-1})'$ produces the identity matrix $\mathbf{I}$ when multiplied by $\mathbf{A}'$ on both the left and the right. By definition, it is the inverse of $\mathbf{A}'$. Therefore,
+
+$$
+\boxed{
+(\mathbf{A}')^{-1}=(\mathbf{A}^{-1})'
+}
+$$
+
+\item[(b)] $(\mathbf{A}\mathbf{B})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}$
+
+\vspace{0.5em}
+
+\noindent Consider the product
+
+$$
+(\mathbf{B}^{-1}\mathbf{A}^{-1})(\mathbf{A}\mathbf{B}).
+$$
+
+\noindent Using associativity property of matrix multiplication, we get
+
+$$
+(\mathbf{B}^{-1}\mathbf{A}^{-1})(\mathbf{A}\mathbf{B})
+=
+\mathbf{B}^{-1}(\mathbf{A}^{-1}\mathbf{A})\mathbf{B}.
+$$
+
+\noindent Since $\mathbf{A}^{-1}\mathbf{A} = \mathbf{I}$,
+
+$$
+\mathbf{B}^{-1}(\mathbf{A}^{-1}\mathbf{A})\mathbf{B}
+=
+\mathbf{B}^{-1}\mathbf{I}\mathbf{B}.
+$$
+
+\noindent Since multiplying by the identity matrix simply results in the original matrix, we have
+
+$$
+\mathbf{B}^{-1}\mathbf{I}\mathbf{B}
+=
+\mathbf{B}^{-1}\mathbf{B}
+$$
+
+By definition of an inverse we know that $\mathbf{B}^{-1}\mathbf{B} = \mathbf{I}$ 
+
+\noindent Therefore,
+
+$$
+\underline{
+(\mathbf{B}^{-1}\mathbf{A}^{-1})(\mathbf{A}\mathbf{B})=\mathbf{I}
+}
+$$
+
+\noindent Similarly,
+
+$$
+(\mathbf{A}\mathbf{B})(\mathbf{B}^{-1}\mathbf{A}^{-1})
+=
+\mathbf{A}(\mathbf{B}\mathbf{B}^{-1})\mathbf{A}^{-1}
+$$
+
+\noindent Since $\mathbf{B}^{-1}\mathbf{B} = \mathbf{I}$,
+
+$$
+(\mathbf{A}\mathbf{B})(\mathbf{B}^{-1}\mathbf{A}^{-1})
+=
+\mathbf{A}\mathbf{I}\mathbf{A}^{-1}
+$$
+
+\noindent Since multiplying by the identity matrix simply results in the original matrix, we have
+
+$$
+\mathbf{A}^{-1}\mathbf{I}\mathbf{A}
+=
+\mathbf{A}^{-1}\mathbf{A}
+$$
+
+By definition of an inverse we know that $\mathbf{A}^{-1}\mathbf{A} = \mathbf{I}$ 
+
+\noindent Therefore,
+
+$$
+\underline{
+(\mathbf{A}\mathbf{B})(\mathbf{B}^{-1}\mathbf{A}^{-1})=\mathbf{I}
+}
+$$
+
+\noindent Since $\mathbf{B}^{-1}\mathbf{A}^{-1}$ produces the identity matrix $\mathbf{I}$ when multiplied by $\mathbf{A}\mathbf{B}$ on both the left and the right, it is, by definition, the inverse of $\mathbf{A}\mathbf{B}$. Therefore,
+
+$$
+\boxed{
+(\mathbf{A}\mathbf{B})^{-1}=\mathbf{B}^{-1}\mathbf{A}^{-1}
+}
+$$
+
+\end{enumerate}
+
+\vspace{2em}
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\vspace{2em}
+
+\noindent {\Large \textbf{Problem 2.8}} \hfill {\large \textbf{(6 points)}}
+
+\vspace{1em}
+
+\noindent Given the matrix
+
+$$
+\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 2 & -2 \end{bmatrix}
+$$
+
+\noindent find the eigenvalues $\lambda_1$ and $\lambda_2$ and the associated normalized eigenvectors $\mathbf{e}_1$ and $\mathbf{e}_2$. Determine the spectral decomposition of $\mathbf{A}$.
+
+\vspace{1em}
+
+\noindent \textbf{Finding the eigenvalues}
+
+\noindent The eigenvalues of matrix $\mathbf{A}$ can be found by solving the equation: $det( \lambda \mathbf{I}-\mathbf{A})$
+
+$$
+det\left(
+\lambda\begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} - \begin{bmatrix} 1 & 2 \\ 2 & -2 \end{bmatrix}
+\right) = 0
+$$
+
+$$
+det\left(
+\begin{bmatrix} \lambda -1 & -2 \\ -2 & \lambda + 2 \end{bmatrix}
+\right) = 0
+$$
+
+\noindent Computing the determinant, 
+
+$$
+(\lambda-1)(\lambda+2)-(-2)(-2)=0
+$$
+
+$$
+\lambda^2+\lambda-2-4=0
+$$
+
+$$
+\lambda^2+\lambda-6=0
+$$
+
+\noindent Factoring the quadratic gives
+
+$$
+(\lambda-2)(\lambda+3)=0
+$$
+
+\noindent Therefore, the eigenvalues are
+
+$$
+\boxed{\lambda_1=2,\qquad \lambda_2=-3}
+$$
+
+\vspace{1em}
+
+\noindent To solve for the eigenvectors, the equation $(\mathbf{A}-\lambda\mathbf{I})e = 0$ will be used.
+
+\vspace{1em}
+
+\noindent \textbf{Finding the eigenvector for $\lambda_1 = 2$}:
+
+\noindent We solve
+
+$$
+(\mathbf{A}-2\mathbf{I})\mathbf{e}_1=\mathbf{0}.
+$$
+
+$$
+\begin{bmatrix}
+1-2 & 2\\
+2 & -2-2
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+-1 & 2\\
+2 & -4
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+$$
+
+\noindent From the first row,
+
+$$
+-x+2y=0
+$$
+
+$$
+x=2y.
+$$
+
+\noindent Let $y=1$. Then $x=2$, so an eigenvector is
+
+$$
+\begin{bmatrix}
+2\\
+1
+\end{bmatrix}.
+$$
+
+\noindent Its length is
+
+$$
+\sqrt{2^2+1^2}=\sqrt{5}.
+$$
+
+\noindent Therefore, the normalized eigenvector is
+
+$$
+\boxed{
+\mathbf{e}_1=
+\begin{bmatrix}
+2/\sqrt{5}\\
+1/\sqrt{5}
+\end{bmatrix}
+}
+$$
+
+\vspace{1em}
+
+\noindent \textbf{Finding the eigenvector for $\lambda_2 = -3$}:
+
+\noindent We solve
+
+$$
+(\mathbf{A}+3\mathbf{I})\mathbf{e}_2=\mathbf{0}.
+$$
+
+$$
+\begin{bmatrix}
+1+3 & 2\\
+2 & -2+3
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+4 & 2\\
+2 & 1
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+$$
+
+\noindent From the first row,
+
+$$
+4x+2y=0
+$$
+
+$$
+y=-2x.
+$$
+
+\noindent Let $x=1$. Then $y=-2$, so an eigenvector is
+
+$$
+\begin{bmatrix}
+1\\
+-2
+\end{bmatrix}.
+$$
+
+\noindent Its length is
+
+$$
+\sqrt{1^2+(-2)^2}=\sqrt{5}.
+$$
+
+\noindent Therefore, the normalized eigenvector is
+
+$$
+\boxed{
+\mathbf{e}_2=
+\begin{bmatrix}
+1/\sqrt{5}\\
+-2/\sqrt{5}
+\end{bmatrix}
+}
+$$
+
+\vspace{1em}
+
+\noindent \textbf{Spectral decomposition}
+
+\noindent The spectral decomposition (2-16) is
+
+$$
+\mathbf{A} = \lambda_1 \mathbf{e}_1 \mathbf{e}_1' + \lambda_2 \mathbf{e}_2 \mathbf{e}_2'.
+$$
+
+$$
+\mathbf{e}_1\mathbf{e}_1' =
+\begin{bmatrix} 2/\sqrt5 \\ 1/\sqrt5 \end{bmatrix}
+\begin{bmatrix} 2/\sqrt5 & 1/\sqrt5 \end{bmatrix}
+=
+\frac{1}{5}\begin{bmatrix} 4 & 2 \\ 2 & 1 \end{bmatrix}
+$$
+
+$$
+\mathbf{e}_2\mathbf{e}_2' =
+\begin{bmatrix} 1/\sqrt5 \\ -2/\sqrt5 \end{bmatrix}
+\begin{bmatrix} 1/\sqrt5 & -2/\sqrt5 \end{bmatrix}
+=
+\frac{1}{5}\begin{bmatrix} 1 & -2 \\ -2 & 4 \end{bmatrix}
+$$
+
+$$
+\mathbf{A} = 2\cdot\frac{1}{5}\begin{bmatrix} 4 & 2 \\ 2 & 1 \end{bmatrix} + (-3)\cdot\frac{1}{5}\begin{bmatrix} 1 & -2 \\ -2 & 4 \end{bmatrix}
+=
+\begin{bmatrix} 8/5 & 4/5 \\ 4/5 & 2/5 \end{bmatrix}
++
+\begin{bmatrix} -3/5 & 6/5 \\ 6/5 & -12/5 \end{bmatrix}
+$$
+
+$$
+\boxed{
+\mathbf{A} = 2\left(\frac{1}{5}\begin{bmatrix} 4 & 2 \\ 2 & 1 \end{bmatrix}\right) + (-3)\left(\frac{1}{5}\begin{bmatrix} 1 & -2 \\ -2 & 4 \end{bmatrix}\right)
+=
+\begin{bmatrix} 1 & 2 \\ 2 & -2 \end{bmatrix}
+}
+$$
+
+\noindent which recovers $\mathbf{A}$, confirming the decomposition is correct.
+
+\vspace{2em}
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\vspace{2em}
+
+\noindent {\Large \textbf{Problem 2.11}} \hfill {\large \textbf{(5 points)}}
+
+\vspace{1em}
+
+\noindent Show that the determinant of the $p \times p$ diagonal matrix $\mathbf{A} = \{a_{ij}\}$ with $a_{ij} = 0, i \neq j$, is given by the product of the diagonal elements; thus, $|\mathbf{A}| = a_{11}a_{22}\cdots a_{pp}$.
+
+\vspace{1em}
+
+\noindent \textbf{Proof}
+
+\noindent Starting with cofactor expansion along the first row, using Definition 2A.24:
+
+$$
+|\mathbf{A}| = a_{11}A_{11} + a_{12}A_{12} + \cdots + a_{1p}A_{1p}
+$$
+
+\noindent where $A_{1j}$ is the cofactor of $a_{1j}$. Since $\mathbf{A}$ is diagonal, every term in the first row is zero except the first term. Thus
+
+$$
+|\mathbf{A}| = a_{11}A_{11} + 0 + \cdots + 0
+$$
+
+$$
+|\mathbf{A}| = a_{11}A_{11}
+$$
+
+\noindent $\mathbf{A}_{11}$, is also the submatrix obtained by deleting the first row and first column of $\mathbf{A}$. Because $\mathbf{A}$ is diagonal, $\mathbf{A}_{11}$ is itself a diagonal matrix, with diagonal entries $a_{22}, a_{33}, \ldots, a_{pp}$:
+
+$$
+\mathbf{A}_{11} =
+\begin{bmatrix}
+a_{22} & 0 & \cdots & 0 \\
+0 & a_{33} & \cdots & 0 \\
+\vdots & & \ddots & \vdots \\
+0 & 0 & \cdots & a_{pp}
+\end{bmatrix}
+$$
+
+\noindent Again if we expand $|\mathbf{A}_{11}|$ along its first row, which again has only one nonzero entry, $a_{22}$, this gives us
+
+$$
+\mathbf{A}_{11} = a_{22}\mathbf{A}_{22}
+$$
+
+Thus, 
+$$
+|\mathbf{A}| = a_{11}a_{22}A_{22}
+$$
+
+\noindent Continuing this process, we will obtain, after $p-1$ reductions,
+
+$$
+|\mathbf{A}| = a_{11}\cdot a_{22} \cdot \mathbf{A}_{22} = a_{11}a_{22}a_{33}\cdots a_{p-1,p-1}\cdot a_{pp}.
+$$
+
+\noindent Therefore,
+
+$$
+\boxed{|\mathbf{A}| = a_{11}a_{22}\cdots a_{pp}}
+$$
+
+\vspace{2em}
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\vspace{2em}
+
+\noindent {\Large \textbf{Problem 2.24}} \hfill {\large \textbf{(5 points)}}
+
+\vspace{1em}
+
+\noindent Let $\mathbf{X}$ have covariance matrix
+
+$$
+\boldsymbol{\Sigma} = \begin{bmatrix} 4 & 0 & 0 \\ 0 & 9 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+$$
+
+\noindent Find:
+
+\begin{enumerate}
+\item[(a)] $\boldsymbol{\Sigma}^{-1}$
+
+\vspace{0.5em}
+
+\noindent Since $\boldsymbol{\Sigma}$ is a diagonal matrix, its inverse is also a diagonal matrix. The diagonal entries of the inverse can simply be obtained by taking the reciprocals of the entries of the original matrix, thus,
+
+$$
+\boxed{
+\boldsymbol{\Sigma}^{-1} =
+\begin{bmatrix} 1/4 & 0 & 0 \\ 0 & 1/9 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+}
+$$
+
+\item[(b)] The eigenvalues and eigenvectors of $\boldsymbol{\Sigma}$
+
+\vspace{0.5em}
+
+\noindent For a diagonal matrix such as $\boldsymbol{\Sigma}$, the eigenvalues $\lambda_{i}$ are simply the diagonal entries $d_{ii}$, and the eigenvectors $e_{i}$ are simply the corresponding basis vectors where the i-th component is 1 and the rest is zero. Thus,
+
+$$
+\boxed{
+\lambda_1 = 4,\ \mathbf{e}_1 = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}; \qquad
+\lambda_2 = 9,\ \mathbf{e}_2 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}; \qquad
+\lambda_3 = 1,\ \mathbf{e}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+}
+$$
+
+\item[(c)] The eigenvalues and eigenvectors of $\boldsymbol{\Sigma}^{-1}$
+
+\vspace{0.5em}
+
+\noindent Again since $\boldsymbol{\Sigma}^{-1}$ is also a diagonal matrix, its the eigenvalues $\lambda_{i}$ are simply the diagonal entries $d_{ii}$, and the eigenvectors $e_{i}$ are simply the corresponding basis vectors where the i-th component is 1 and the rest is zero. Thus,
+
+$$
+\boxed{
+\lambda_1= \frac{1}{4},\ \mathbf{e}_1 = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}; \qquad
+\lambda_2 = \frac{1}{9},\ \mathbf{e}_2 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}; \qquad
+\lambda_3 = 1,\ \mathbf{e}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+}
+$$
+
+\end{enumerate}
+
+\vspace{2em}
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\vspace{2em}
+
+\noindent {\Large \textbf{Problem 2.30}} \hfill {\large \textbf{(8 points)}}
+
+\vspace{1em}
+
+\noindent You are given the random vector $\mathbf{X}' = [X_1, X_2, X_3, X_4]$ with mean vector $\boldsymbol{\mu}_X' = [4, 3, 2, 1]$ and variance-covariance matrix
+
+$$
+\boldsymbol{\Sigma}_X =
+\begin{bmatrix}
+3 & 0 & 2 & 2 \\
+0 & 1 & 1 & 0 \\
+2 & 1 & 9 & -2 \\
+2 & 0 & -2 & 4
+\end{bmatrix}
+$$
+
+\noindent Partition $\mathbf{X}$ as $\mathbf{X} = \begin{bmatrix} X_1 \\ X_2 \\ X_3 \\ X_4 \end{bmatrix} = \begin{bmatrix} \mathbf{X}^{(1)} \\ \mathbf{X}^{(2)} \end{bmatrix}$, so that
+
+$$
+\boldsymbol{\mu}^{(1)} = \begin{bmatrix} 4 \\ 3 \end{bmatrix}, \quad
+\boldsymbol{\mu}^{(2)} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}, \quad
+\boldsymbol{\Sigma}_{11} = \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}, \quad
+\boldsymbol{\Sigma}_{12} = \begin{bmatrix} 2 & 2 \\ 1 & 0 \end{bmatrix}, \quad
+\boldsymbol{\Sigma}_{22} = \begin{bmatrix} 9 & -2 \\ -2 & 4 \end{bmatrix}
+$$
+
+\noindent Let $\mathbf{A} = \begin{bmatrix} 1 & 2 \end{bmatrix}$ and $\mathbf{B} = \begin{bmatrix} 1 & -2 \\ 2 & -1 \end{bmatrix}$, and consider the linear combinations $\mathbf{A}\mathbf{X}^{(1)}$ and $\mathbf{B}\mathbf{X}^{(2)}$. Find:
+
+\begin{enumerate}
+\item[(a)] $E(\mathbf{X}^{(1)})$
+
+\vspace{0.5em}
+
+\noindent $E(\mathbf{X}^{(1)})$ is simply the first two entries of $\boldsymbol{\mu}_X$:
+
+$$
+\boxed{
+E(\mathbf{X}^{(1)}) = \begin{bmatrix} 4 \\ 3 \end{bmatrix}
+}
+$$
+
+\item[(b)] $E(\mathbf{A}\mathbf{X}^{(1)})$
+
+\vspace{0.5em}
+
+\noindent Using $E(\mathbf{A}\mathbf{X}) = \mathbf{A}E(\mathbf{X})$:
+
+$$
+E(\mathbf{A}\mathbf{X}^{(1)}) = \mathbf{A}E(\mathbf{X}^{(1)})
+=
+\begin{bmatrix} 1 & 2 \end{bmatrix}
+\begin{bmatrix} 4 \\ 3 \end{bmatrix}
+= (1)(4) + (2)(3) = 4 + 6
+$$
+
+$$
+\boxed{
+E(\mathbf{A}\mathbf{X}^{(1)}) = 10
+}
+$$
+
+\item[(c)] $\text{Cov}(\mathbf{X}^{(1)})$
+
+\vspace{0.5em}
+
+\noindent The covariance matrix of $X^{(1)}$ is simply the upper-left $2\times2$ block of $\Sigma_X$:
+
+$$
+\boxed{
+\text{Cov}(\mathbf{X}^{(1)}) = \boldsymbol{\Sigma}_{11} = \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+}
+$$
+
+\item[(d)] $\text{Cov}(\mathbf{A}\mathbf{X}^{(1)})$
+
+\vspace{0.5em}
+
+\noindent Using $\text{Cov}(\mathbf{A}\mathbf{X}) = \mathbf{A}\,\text{Cov}(\mathbf{X})\,\mathbf{A}'$:
+
+Since 
+
+$$
+\mathbf{A} = \begin{bmatrix} 1 & 2 \end{bmatrix}, \hspace{1em} A'= \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+$$
+
+we get
+
+$$
+\text{Cov}(\mathbf{AX}^{(1)}) = \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+$$
+
+Multiplying the first two matrices,
+
+$$
+\begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}  = \begin{bmatrix} 3 & 2
+\end{bmatrix}
+$$
+
+Then multiplying the resulting product and the last matrix, we get
+
+$$
+\begin{bmatrix} 3 & 2 \end{bmatrix} \begin{bmatrix} 1 \\ 2 \end{bmatrix} = 3 + 4 =7
+$$
+
+$$
+\boxed{
+\text{Cov}(\mathbf{A}\mathbf{X}^{(1)}) = 7
+}
+$$
+
+\item[(e)] $E(\mathbf{X}^{(2)})$
+
+\noindent This is simply the last two elements of the mean vector
+
+$$
+\boxed{
+E(\mathbf{X}^{(2)}) = \begin{bmatrix} 2 \\ 1 \end{bmatrix}
+}
+$$
+
+\item[(f)] $E(\mathbf{B}\mathbf{X}^{(2)})$
+
+\vspace{0.5em}
+
+\noindent Using $E(\mathbf{B}\mathbf{X}^{(2)}) = \mathbf{B}\mathbf{X}^{(2)}$
+
+So we have,
+$$
+\begin{bmatrix} 1 & -2 \\ 2 & -1 \end{bmatrix}
+\begin{bmatrix} 2 \\ 1 \end{bmatrix}
+=
+\begin{bmatrix} (1)(2)+(-2)(1) \\ (2)(2)+(-1)(1) \end{bmatrix}
+=
+\begin{bmatrix} 2-2 \\ 4-1 \end{bmatrix} = \begin{bmatrix} 0 \\ 3 \end{bmatrix}
+$$
+
+$$
+\boxed{
+E(\mathbf{B}\mathbf{X}^{(2)}) = \begin{bmatrix} 0 \\ 3 \end{bmatrix}
+}
+$$
+
+\item[(g)] $\text{Cov}(\mathbf{X}^{(2)})$
+
+\noindent This is simply the bottom right 2x2 block of the mean vector
+$$
+\boxed{
+\text{Cov}(\mathbf{X}^{(2)}) = \boldsymbol{\Sigma}_{22} = \begin{bmatrix} 9 & -2 \\ -2 & 4 \end{bmatrix}
+}
+$$
+
+\item[(h)] $\text{Cov}(\mathbf{B}\mathbf{X}^{(2)})$
+
+\vspace{0.5em}
+
+\noindent Using $\text{Cov}(\mathbf{B}\mathbf{X}) = \mathbf{B}\,\text{Cov}(\mathbf{X})\,\mathbf{B}'$:
+
+We have,
+$$
+\mathbf{B} = \begin{bmatrix} 1 & -2 \\ 2 & -1 \end{bmatrix}, \hspace{1em} \mathbf{B'} = \begin{bmatrix} 1 & 2 \\ -2 & -1 \end{bmatrix}
+$$
+
+\noindent So, 
+
+$$
+\text{Cov}(\mathbf{B}\mathbf{X}^{(2)}) = \begin{bmatrix} 1 & -2 \\ 2 & -1 \end{bmatrix} \begin{bmatrix} 9 & -2 \\ -2 & 4 \end{bmatrix}  \begin{bmatrix} 1 & 2 \\ -2 & -1 \end{bmatrix}
+$$
+
+Multiplying the first two matrices, we get
+
+$$
+\begin{bmatrix} 1 & -2 \\ 2 & -1 \end{bmatrix}
+\begin{bmatrix} 9 & -2 \\ -2 & 4 \end{bmatrix}
+=
+\begin{bmatrix} (1)(9)+(-2)(-2) & (1)(-2)+(-2)(4) \\ (2)(9)+(-1)(-2) & (2)(-2)+(-1)(4) \end{bmatrix}
+=
+\begin{bmatrix} 13 & -10 \\ 20 & -8 \end{bmatrix}
+$$
+
+Now, we multiply the result with the last matrix getting
+
+$$
+\begin{bmatrix} 13 & -10 \\ 20 & -8 \end{bmatrix}
+\begin{bmatrix} 1 & 2 \\ -2 & -1 \end{bmatrix}
+=
+\begin{bmatrix} (13)(1)+(-10)(-2) & (13)(2)+(-10)(-1) \\ (20)(1)+(-8)(-2) & (20)(2)+(-8)(-1) \end{bmatrix} = \begin{bmatrix} 33 & 36 \\ 36 & 48 \end{bmatrix}
+$$
+
+Therefore,
+
+$$
+\boxed{
+\text{Cov}(\mathbf{B}\mathbf{X}^{(2)}) = \begin{bmatrix} 33 & 36 \\ 36 & 48 \end{bmatrix}
+}
+$$
+
+\item[(i)] $\text{Cov}(\mathbf{X}^{(1)}, \mathbf{X}^{(2)})$
+
+\noindent This is simply the upper-right 2x2 block of the mean vector:
+
+$$
+\boxed{
+\text{Cov}(\mathbf{X}^{(1)}, \mathbf{X}^{(2)}) = \boldsymbol{\Sigma}_{12} = \begin{bmatrix} 2 & 2 \\ 1 & 0 \end{bmatrix}
+}
+$$
+
+\item[(j)] $\text{Cov}(\mathbf{A}\mathbf{X}^{(1)}, \mathbf{B}\mathbf{X}^{(2)})$
+
+\vspace{0.5em}
+
+\noindent Using $\text{Cov}(\mathbf{A}\mathbf{X}^{(1)}, \mathbf{B}\mathbf{X}^{(2)}) = \mathbf{A}\,\text{Cov}(\mathbf{X}^{(1)},\mathbf{X}^{(2)})\,\mathbf{B}'$:
+
+Substituting the values we have 
+$$
+= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 & 2 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 1 & 2 \\ -2 & -1 \end{bmatrix}
+$$
+
+Multiplying the first two matrices,
+
+$$
+\begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 & 2 \\ 1 & 0 \end{bmatrix} =
+\begin{bmatrix} (1)(2)+(2)(1) & (1)(2)+(2)(0) \end{bmatrix}
+= \begin{bmatrix} 4 & 2 \end{bmatrix}
+$$
+
+Then multiplying the result with the last matrix,
+
+$$
+\begin{bmatrix} 4 & 2 \end{bmatrix}
+\begin{bmatrix} 1 & 2 \\ -2 & -1 \end{bmatrix}
+=
+\begin{bmatrix} (4)(1)+(2)(-2) & (4)(2)+(2)(-1) \end{bmatrix}
+=
+\begin{bmatrix} 4-4 & 8-2 \end{bmatrix} 
+= 
+\begin{bmatrix} 0 & 6 \end{bmatrix}
+$$
+
+Therefore, 
+
+$$
+\boxed{
+\text{Cov}(\mathbf{A}\mathbf{X}^{(1)}, \mathbf{B}\mathbf{X}^{(2)}) = \begin{bmatrix} 0 & 6 \end{bmatrix}
+}
+$$
+
+\end{enumerate}
+
+\vspace{2em}
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\vspace{2em}
+
+\noindent {\Large \textbf{Problem 2.41}} \hfill {\large \textbf{(5 points)}}
+
+\vspace{1em}
+
+\noindent You are given the random vector $\mathbf{X}' = [X_1, X_2, X_3, X_4]$ with mean vector $\boldsymbol{\mu}_X' = [3, 2, -2, 0]$ and variance-covariance matrix
+
+$$
+\boldsymbol{\Sigma}_X =
+\begin{bmatrix}
+3 & 0 & 0 & 0 \\
+0 & 3 & 0 & 0 \\
+0 & 0 & 3 & 0 \\
+0 & 0 & 0 & 3
+\end{bmatrix}
+= 3\mathbf{I}
+$$
+
+\noindent Let
+
+$$
+\mathbf{A} =
+\begin{bmatrix}
+1 & -1 & 0 & 0 \\
+1 & 1 & -2 & 0 \\
+1 & 1 & 1 & -3
+\end{bmatrix}
+$$
+
+\begin{enumerate}
+\item[(a)] $E(\mathbf{A}\mathbf{X})$, the mean of $\mathbf{A}\mathbf{X}$
+
+\vspace{0.5em}
+
+\noindent Using $E(\mathbf{A}\mathbf{X}) = \mathbf{A}\boldsymbol{\mu}_X$, with $\boldsymbol{\mu}_X = \begin{bmatrix} 3 \\ 2 \\ -2 \\ 0 \end{bmatrix}$:
+
+Therefore,
+
+$$
+\mathbf{A}\boldsymbol{\mu}_X = \begin{bmatrix}
+1 & -1 & 0 & 0 \\
+1 & 1 & -2 & 0 \\
+1 & 1 & 1 & -3
+\end{bmatrix} 
+\begin{bmatrix} 3 \\ 2 \\ -2 \\ 0 \end{bmatrix} 
+= 
+\begin{bmatrix}
+(1)(3)+(-1)(2)+(0)(-2)+(0)(0) \\
+(1)(3)+(1)(2)+(-2)(-2)+(0)(0) \\
+(1)(3)+(1)(2)+(1)(-2)+(-3)(0)
+\end{bmatrix}
+$$
+
+$$
+=
+\begin{bmatrix}
+3-2 \\
+3+2+4 \\
+3+2-2
+\end{bmatrix} 
+= \begin{bmatrix} 1 \\ 9 \\ 3 \end{bmatrix}
+$$
+
+\noindent Thus, 
+
+$$
+\boxed{
+E(\mathbf{A}\mathbf{X}) = \begin{bmatrix} 1 \\ 9 \\ 3 \end{bmatrix}
+}
+$$
+
+\item[(b)] $\text{Cov}(\mathbf{A}\mathbf{X})$, the variances and covariances of $\mathbf{A}\mathbf{X}$
+
+\vspace{0.5em}
+
+\noindent Using $\text{Cov}(\mathbf{A}\mathbf{X}) = \mathbf{A}\boldsymbol{\Sigma}_X\mathbf{A}'$, Since $\boldsymbol{\Sigma}_X = 3I$, we can simplify het equation to ${Cov}(\mathbf{A}\mathbf{X}) = \mathbf{A}\mathbf{(3I)}\mathbf{A}'= 3\mathbf{A}\mathbf{A}'$.
+
+\noindent Let us first compute for $\mathbf{A}\mathbf{A}'$ by going through the rows of A:
+$$
+\mathbf{r}_1 = \begin{bmatrix} 1 & -1 & 0 & 0 \end{bmatrix}, \quad
+\mathbf{r}_2 = \begin{bmatrix} 1 & 1 & -2 & 0 \end{bmatrix}, \quad
+\mathbf{r}_3 = \begin{bmatrix} 1 & 1 & 1 & -3 \end{bmatrix}
+$$
+
+$$
+\mathbf{r}_1\mathbf{r}_1' = 1+1+0+0 = 2, \qquad
+\mathbf{r}_1\mathbf{r}_2' = 1-1+0+0 = 0, \qquad
+\mathbf{r}_1\mathbf{r}_3' = 1-1+0+0 = 0
+$$
+
+$$
+\mathbf{r}_2\mathbf{r}_2' = 1+1+4+0 = 6, \qquad
+\mathbf{r}_2\mathbf{r}_3' = 1+1-2+0 = 0, \qquad
+\mathbf{r}_3\mathbf{r}_3' = 1+1+1+9 = 12
+$$
+
+\noindent So we have,
+$$
+\mathbf{A}\mathbf{A}' = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 6 & 0 \\ 0 & 0 & 12 \end{bmatrix}
+$$
+
+\noindent Now, we multiply by 3,
+
+$$
+3\mathbf{A}\mathbf{A}' = 3\begin{bmatrix} 2 & 0 & 0 \\ 0 & 6 & 0 \\ 0 & 0 & 12 \end{bmatrix} 
+= \begin{bmatrix} 6 & 0 & 0 \\ 0 & 18 & 0 \\ 0 & 0 & 36 \end{bmatrix}
+$$
+
+Hence,
+
+$$
+\boxed{
+\text{Cov}(\mathbf{A}\mathbf{X}) = \begin{bmatrix} 6 & 0 & 0 \\ 0 & 18 & 0 \\ 0 & 0 & 36 \end{bmatrix}
+}
+$$
+
+Therefore the variances are,
+
+$$
+\boxed{
+\text{Cov}(Y_1,Y_2) = 0, \hspace{1em} \text{Cov}(Y_1,Y_3) = 0 \text{Cov}(Y_2,Y_3) = 0
+}
+$$
+
+
+$$
+\boxed{
+\mathbf{Var(Y_1) = 6}, \hspace{1em} \mathbf{Var(Y_2) = 18}, \hspace{1em} \mathbf{Var(Y_3) = 36}
+}
+$$
+\item[(c)] Which pairs of linear combinations have zero covariance?
+
+\vspace{0.5em}
+
+\noindent From the previously calculated $\mathbf{Cov(AX)}$ in part (b), we have
+
+$$
+\text{Cov}(\mathbf{A}\mathbf{X}) = \begin{bmatrix} 6 & 0 & 0 \\ 0 & 18 & 0 \\ 0 & 0 & 36 \end{bmatrix}
+$$
+
+\noindent The off-diagonal entries of $\text{Cov}(\mathbf{A}\mathbf{X})$ found in part (b) give the pairwise covariances. It can be easily seen that all off-diagonal entries of $\text{Cov}(\mathbf{A}\mathbf{X})$ equal zero, meaning, $\text{Cov}(Y_1,Y_2) = \text{Cov}(Y_1,Y_3) = \text{Cov}(Y_2,Y_3) = 0$,
+
+$$
+\boxed{\text{every pair among } Y_1, Y_2, Y_3 \text{ has zero covariance.}}
+$$
+
+\end{enumerate}
+
+\end{document}
