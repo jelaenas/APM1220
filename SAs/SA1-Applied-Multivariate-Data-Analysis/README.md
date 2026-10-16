@@ -63,7 +63,7 @@ Python in Google Colab. Packages used include pandas, NumPy, Matplotlib, Seaborn
 
 ## **Instructions for reproducing the analysis** 
 1. Download winequality-red.csv and winequality-white.csv from the UCI dataset source above or from the data in this repository
-2. Download SA1_Wine_Analysis.ipynb also found in this repository. 
+2. Download SA1_Wine_Analysis.ipynb found in code branch of  this repository. 
 3. Place both CSV files in the same working directory as SA1_Wine_Analysis.ipynb, or update the file paths in the first data-loading cell.
 4.  Install the packages used by the notebook if they are not already installed. The notebook already includes an installation command for
 factor_analyzer. Other packages may also need to be installed in a fresh environment.
